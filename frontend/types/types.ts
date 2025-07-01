@@ -4,3 +4,4 @@ export interface User {
 	bio?: string,
 	image?: string
 }
+

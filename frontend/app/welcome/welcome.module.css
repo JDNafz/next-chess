@@ -1,0 +1,87 @@
+.container.WelcomePage {
+  display: flex;
+  flex-flow: column;
+  margin: 0 300px;
+}
+
+.welcomeContent {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: center;
+  width: 100%;
+}
+.welcome {
+  font-size: 2.8rem;
+  text-align: center;
+}
+.welcomeParagraph {
+  font-size: 1.5rem;
+  padding-right: 70px;
+}
+
+.loginDiv {
+  padding-top: 100px;
+  width: 40%;
+}
+
+.paragraphs {
+  max-width: 60%;
+}
+.loginArea {
+  display: flex;
+  flex-flow: row wrap;
+  max-height: 450px;
+  max-width: 500px;
+  justify-content: center;
+}
+
+.loginNote {
+  display: flex;
+  width: 80%;
+}
+
+@media screen and (max-width: 1600px) {
+  .container.WelcomePage {
+    display: flex;
+    flex-flow: column;
+    margin: 0 200px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .container.WelcomePage {
+    display: flex;
+    flex-flow: column;
+    margin: 0 100px;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .welcomeContent {
+    flex-flow: wrap;
+  }
+  .paragraphs {
+    max-width: 100%;
+  }
+  .welcomeParagraph {
+    padding-right: 0;
+    padding: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container.WelcomePage {
+    display: flex;
+    flex-flow: column;
+    margin: 0 0 0 20px;
+  }
+}
+@media screen and (max-width: 501px) {
+  .paragraphs {
+    max-width: 100%;
+  }
+  .container.WelcomePage {
+    display: flex;
+    flex-flow: column;
+    margin: 0 0 0 20px;
+  }
+}
