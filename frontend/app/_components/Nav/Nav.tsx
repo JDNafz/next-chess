@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./nav.module.css";
-import { mockUser } from "../../../types/mockUser";
+import { mockUser } from "../../lib/interfaces/mockUser";
 
 export const handleLogOut = () => {
   // setUser(null);
@@ -28,7 +28,7 @@ export default function Nav() {
         {/* If a user is logged in, show these links */}
         {user?.id && (
           <>
-            <Link className={styles.navLink} href="/chess">
+            <Link className={styles.navLink} href="/">
               Chess
             </Link>
             <Link className={styles.navLink} href="/profile">
