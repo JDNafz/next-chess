@@ -1,14 +1,16 @@
 
 // use styles modules to prevent to much global css from happening
-import styles from "./page.module.css";
+import Link from "next/link";
+// import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        
+    <div>
+      <main>
+        <h1> Just Chess </h1>
+				<Link href={"/app/About"} >About</Link>
       </main>
-      <footer className={styles.footer}>
+      <footer>
       </footer>
     </div>
   );

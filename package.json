@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "both": "concurrently \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\"",
-    "dev": "npm run dev --workspace=frontend",
+    "dev": "npx next dev frontend/ --turbo",
     "server": "npm run dev --workspace=backend"
   },
   "devDependencies": {
