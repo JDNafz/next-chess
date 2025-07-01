@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Nav from "./_components/Nav";
 
 // import { Geist, Geist_Mono } from "next/font/google";
 
@@ -27,7 +28,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <header>
-          <nav>Navigation</nav>
+          <Nav />
         </header>
         <main>{children}</main>
 				<footer>© JD Nafziger, 2025</footer>
