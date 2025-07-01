@@ -1,9 +1,0 @@
-{
-  "name": "@next-chess/shared",
-  "version": "1.0.0",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc -b"
-  },
-  "private": true
-}
