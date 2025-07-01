@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./nav.module.css";
-import { mockUser } from "../../types/mockUser";
+import { mockUser } from "../../../types/mockUser";
 
 export const handleLogOut = () => {
   // setUser(null);
