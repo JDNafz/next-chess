@@ -6,8 +6,8 @@ export const handleLogOut = () => {
   // setUser(null);
 };
 export default function Nav() {
-	const user = mockUser
-	// const user = null;
+  const user = mockUser;
+  // const user = null;
   return (
     <div className={styles.nav}>
       <Link href="/welcome">

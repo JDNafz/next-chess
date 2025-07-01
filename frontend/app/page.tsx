@@ -1,4 +1,3 @@
-
 // use styles modules to prevent to much global css from happening
 import Link from "next/link";
 // import styles from "./page.module.css";
@@ -6,11 +5,21 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-        <h1> Just Chess </h1>
-				<Link href={"/app/About"} >About</Link>
+      <h1> Just Chess </h1>
+      <Link href={"/app/About"}>About</Link>
 
-      <footer>
-      </footer>
+      <div className="plusTable">
+        <div id="playArea">
+          {/* <Board /> */}
+          {/* <BoardControls /> */}
+          {/* <Winner /> */}
+          {/* <PromotePawn /> */}
+        </div>
+      </div>
+      {/* {showMoveList && <GameInfo />} */}
+      {/* <Menu /> */}
+
+      <footer/>
     </div>
   );
 }
