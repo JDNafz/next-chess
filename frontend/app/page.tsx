@@ -6,10 +6,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <main>
         <h1> Just Chess </h1>
 				<Link href={"/app/About"} >About</Link>
-      </main>
+
       <footer>
       </footer>
     </div>

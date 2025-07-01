@@ -1,5 +1,5 @@
 import styles from "./welcome.module.css";
-import { mockUser } from "../../types/mockUser";
+// import { mockUser } from "../../types/mockUser";
 import Link from "next/link";
 
 export default function Welcome() {
@@ -8,7 +8,7 @@ export default function Welcome() {
 	
 
   return (
-    <div className={styles.containerWelcomePage}>
+    <div className={`${styles.container} ${styles.WelcomePage}`}>
       <h1 className={styles.welcome}>
         Welcome <br /> to JC by JD
       </h1>

@@ -7,13 +7,14 @@ export const handleLogOut = () => {
 };
 export default function Nav() {
 	const user = mockUser
+	// const user = null;
   return (
     <div className={styles.nav}>
       <Link href="/welcome">
         <h2 className={styles.navTitle}>JustChess</h2>
       </Link>
       <div className={styles.navWrapper}>
-        {!user.id && (
+        {!user?.id && (
           <>
             <Link className={styles.navLink} href="/welcome">
               Login
@@ -25,7 +26,7 @@ export default function Nav() {
         )}
 
         {/* If a user is logged in, show these links */}
-        {user.id && (
+        {user?.id && (
           <>
             <Link className={styles.navLink} href="/chess">
               Chess
