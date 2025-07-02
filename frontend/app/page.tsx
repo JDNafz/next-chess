@@ -1,6 +1,6 @@
 // use styles modules to prevent to much global css from happening
 
-import Board from "./_components/Board/page";
+import Board from "./_components/Board/Board";
 // import styles from "./page.module.css";
 
 export default function Home() {

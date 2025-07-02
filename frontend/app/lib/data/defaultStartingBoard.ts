@@ -4,7 +4,7 @@
 import { Board } from "../interfaces/board";
 
 // the piece names were added manually.
-export const defaultBoard: Board = [
+export const defaultStartingBoard: Board = [
 	{
 		"id": 0,
 		"coordinate": "a1",
@@ -14,7 +14,7 @@ export const defaultBoard: Board = [
 	{
 		"id": 1,
 		"coordinate": "b1",
-		"x": 1, "y": 0, "piece": 'wnl',
+		"x": 1, "y": 0, "piece": 'wn',
 		"isBlack": false
 	},
 	{
@@ -44,7 +44,7 @@ export const defaultBoard: Board = [
 	{
 		"id": 6,
 		"coordinate": "g1",
-		"x": 6, "y": 0, "piece": 'wnl',
+		"x": 6, "y": 0, "piece": 'wn',
 		"isBlack": true
 	},
 	{
@@ -350,7 +350,7 @@ export const defaultBoard: Board = [
 	{
 		"id": 57,
 		"coordinate": "b8",
-		"x": 1, "y": 7, "piece": 'bnl',
+		"x": 1, "y": 7, "piece": 'bn',
 		"isBlack": true
 	},
 	{
@@ -380,7 +380,7 @@ export const defaultBoard: Board = [
 	{
 		"id": 62,
 		"coordinate": "g8",
-		"x": 6, "y": 7, "piece": 'bnl',
+		"x": 6, "y": 7, "piece": 'bn',
 		"isBlack": false
 	},
 	{

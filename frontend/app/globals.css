@@ -46,3 +46,134 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+/* --------------------------------- */
+
+
+#background {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-top: 64px;
+  width: 100%;
+  justify-content: center;
+}
+
+#playArea {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  /* min-width: 800px; */
+  height: 100%;
+  padding-top: 20px;
+}
+.plusTable {
+  height: 700px;
+}
+#board {
+  border: 10px rgb(144, 108, 42) solid;
+  border-radius: 2%;
+  height: 700px;
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+#gameInfo {
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 1400px) {
+  .plusTable {
+    flex-flow: row wrap;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #board {
+    height: 600px;
+    width: 600px;
+  }
+  .plusTable {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #board {
+    height: 550px;
+    width: 550px;
+  }
+  .plusTable {
+    height: 550px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #background {
+    flex-flow: row wrap;
+  }
+  .plusTable {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #board {
+    height: 550px;
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #board {
+    height: 450px;
+    width: 450px;
+  }
+  .plusTable {
+    max-height: 500px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #board {
+    max-height: 400px;
+    max-width: 400px;
+  }
+  #playArea {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .plusTable {
+    height: 460px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #board {
+    max-height: 300px;
+    max-width: 300px;
+  }
+  #playArea {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .plusTable {
+    max-height: 370px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #board {
+    max-height: 270px;
+    max-width: 270px;
+  }
+  #playArea {
+    max-height: 270px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .plusTable {
+    max-height: 355px;
+  }
+}
