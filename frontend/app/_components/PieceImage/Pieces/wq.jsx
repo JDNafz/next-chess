@@ -1,7 +1,9 @@
+import styles from "../piece.module.css"
 
 export default function wq() {
   return (
     <svg
+      className={styles.svg}
       width="30"
       height="30"
       x="0"
@@ -45,4 +47,3 @@ export default function wq() {
     </svg>
   );
 }
-

@@ -1,3 +1,5 @@
+import styles from "./piece.module.css"
+
 // Import Statements:
 import Bk from "./Pieces/bk";
 import Bq from "./Pieces/bq";
@@ -67,10 +69,9 @@ export default function PieceImage({ piece }: {piece: string}) {
     default:
       imageComponent = null;
   }
-
   return (
     <>
-      <div className="pieceImage">{imageComponent}</div>
+      <div className={styles.pieceImage}>{imageComponent}</div>
     </>
   );
 }

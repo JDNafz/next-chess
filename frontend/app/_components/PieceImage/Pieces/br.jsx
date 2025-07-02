@@ -1,7 +1,9 @@
+import styles from "../piece.module.css"
 
 export default function br() {
   return (
     <svg
+      className={styles.svg}
       width="30"
       height="30"
       x="0"

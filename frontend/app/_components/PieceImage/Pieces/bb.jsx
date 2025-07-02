@@ -1,7 +1,8 @@
+import styles from "../piece.module.css"
 
 export default function bb() {
   return (
-    <svg
+    <svg className={styles.svg}
       xmlns="http://www.w3.org/2000/svg"
       width="30"
       height="30"

@@ -201,7 +201,6 @@ export default function SquareComponent({ square }: SquareProps) {
       >
         <div className={styles.coordinate}>{square.coordinate}</div>
         <PieceImage key={`img${square.id}`} piece={square.piece} />
-        {/* <div>{square.piece}</div> */}
       </div>
     </>
   );

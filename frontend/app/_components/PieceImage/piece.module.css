@@ -1,0 +1,12 @@
+.pieceImage {
+  height: 70%;
+  width: 70%;
+  text-align: center;
+}
+
+.svg {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  filter: drop-shadow(-1px 3px 2px rgb(24, 24, 24));
+}

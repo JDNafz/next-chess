@@ -1,7 +1,9 @@
+import styles from "../piece.module.css"
 
 export default function wnr() {
   return (
     <svg
+      className={styles.svg}
       width="30"
       height="30"
       x="0"
@@ -26,11 +28,7 @@ export default function wnr() {
           strokeWidth="2.684"
           d="M-228.803-48.079s-76.173 56.995-76.173 159.922"
         ></path>
-        <path
-          fill="none"
-          strokeWidth="2.684"
-          d="M-132.093 56.862c-.062-.126-.062-.126 0 0z"
-        ></path>
+        <path fill="none" strokeWidth="2.684" d="M-132.093 56.862c-.062-.126-.062-.126 0 0z"></path>
         <path
           fill="none"
           strokeWidth="2.684"
@@ -56,38 +54,13 @@ export default function wnr() {
           strokeWidth="2.684"
           d="M-116.865 34.777c-4.803-1.308-7.853-.87-10.03.437 0 0 2.177-6.542-1.745-12.214-3.93-5.67-10.47-6.107-16.14-17.01"
         ></path>
-        <path
-          fill="none"
-          strokeWidth="2.684"
-          d="M-244.219 -33.685L-252.493 -38.917"
-        ></path>
-        <path
-          fill="none"
-          strokeWidth="2.684"
-          d="M-261.23 -14.932L-269.52 -18.855"
-        ></path>
-        <path
-          fill="none"
-          strokeWidth="2.684"
-          d="M-276.492 6.839L-286.087 2.907"
-        ></path>
-        <path
-          fill="none"
-          strokeWidth="2.684"
-          d="M-288.708 31.725L-298.738 28.233"
-        ></path>
-        <path
-          fill="none"
-          strokeWidth="2.684"
-          d="M-298.3 60.952L-308.771 57.9"
-        ></path>
-        <path
-          fill="none"
-          strokeWidth="2.684"
-          d="M-303.973 90.62L-314.874 89.298"
-        ></path>
+        <path fill="none" strokeWidth="2.684" d="M-244.219 -33.685L-252.493 -38.917"></path>
+        <path fill="none" strokeWidth="2.684" d="M-261.23 -14.932L-269.52 -18.855"></path>
+        <path fill="none" strokeWidth="2.684" d="M-276.492 6.839L-286.087 2.907"></path>
+        <path fill="none" strokeWidth="2.684" d="M-288.708 31.725L-298.738 28.233"></path>
+        <path fill="none" strokeWidth="2.684" d="M-298.3 60.952L-308.771 57.9"></path>
+        <path fill="none" strokeWidth="2.684" d="M-303.973 90.62L-314.874 89.298"></path>
       </g>
     </svg>
   );
 }
-

@@ -1,7 +1,9 @@
+import styles from "../piece.module.css"
 
 export default function wb() {
   return (
     <svg
+      className={styles.svg}
       width="30"
       height="30"
       x="0"
@@ -58,12 +60,7 @@ export default function wb() {
           strokeWidth="4.152"
           d="M-11.094 75.424C-.81 71 11.012 67.212 26.332 67.114c13.044-.087 27.133 3.88 37.416 8.304.564-.566 2.953-1.29 4.683-5.89-8.647-9.361-21.504-14.251-42.098-14.251-21.975 0-33.707 5.48-42.353 14.853 1.7 4.593 4.342 4.72 4.908 5.286z"
         ></path>
-        <path
-          fill="none"
-          stroke="#000"
-          strokeWidth="3.189"
-          d="M26.345 55.289L26.345 67.118"
-        ></path>
+        <path fill="none" stroke="#000" strokeWidth="3.189" d="M26.345 55.289L26.345 67.118"></path>
         <path
           fill="#fff"
           stroke="#000"
