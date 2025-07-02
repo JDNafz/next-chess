@@ -7,6 +7,7 @@
 import { Dispatch, SetStateAction } from "react";
 import { Board, Square } from "../../lib/interfaces/board";
 import styles from "./square.module.css";
+import PieceImage from "../PieceImage/PieceImage";
 // import { useState } from "react";
 
 interface SquareProps {
@@ -199,8 +200,8 @@ export default function SquareComponent({ square }: SquareProps) {
         onClick={() => handleClick()}
       >
         <div className={styles.coordinate}>{square.coordinate}</div>
-        {/* <Image key={`img${square.id}`} piece={square.piece} /> */}
-        <div>{square.piece}</div>
+        <PieceImage key={`img${square.id}`} piece={square.piece} />
+        {/* <div>{square.piece}</div> */}
       </div>
     </>
   );
