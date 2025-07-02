@@ -4,8 +4,6 @@ import { defaultStartingBoard } from "../../lib/data/defaultStartingBoard"
 import { Board, Square } from "../../lib/interfaces/board"
 import SquareComponent from "../SquareComponent/SquareComponent";
 
-import style from "./board.module.css";
-
 
 export default function BoardComponent() {
 	const [board,setBoard] = useState<Board>(defaultStartingBoard)

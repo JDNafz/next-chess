@@ -6,10 +6,6 @@ import Board from "./_components/Board/Board";
 export default function Home() {
   return (
     <div>
-			<br></br>
-			<br></br>
-      <h1> Just Chess </h1>
-
       <div className="plusTable">
         <div id="playArea">
           <Board />
