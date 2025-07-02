@@ -28,7 +28,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <Nav />
-        <main id="background">{children}</main>
+        {children}
         <footer>© JD Nafziger, 2025</footer>
       </body>
     </html>
