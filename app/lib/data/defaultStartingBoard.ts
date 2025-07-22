@@ -1,7 +1,7 @@
 
 // this was generated from './generateBoard.ts'
 
-import { Board } from "../interfaces/board";
+import { Board } from "../interfaces/Board";
 
 // the piece names were added manually.
 export const defaultStartingBoard: Board = [

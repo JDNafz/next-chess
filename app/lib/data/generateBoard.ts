@@ -1,7 +1,7 @@
 
 import fs from 'fs'
 import path from 'path'
-import { Board, Square } from '../interfaces/board';
+import { Board, Square } from '../interfaces/Board';
 
 // Run this file with 
 // npx tsx frontend/app/lib/data/generateBoard.ts

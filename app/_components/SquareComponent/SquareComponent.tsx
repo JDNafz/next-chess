@@ -5,10 +5,11 @@
 // import makeSpecialMove from "../calculationFunctions/makeSpecialMove";
 
 import { Dispatch, SetStateAction } from "react";
-import { Board, Square } from "../../lib/interfaces/board";
+import { Board, Square } from "../../lib/interfaces/Board";
 import styles from "./square.module.css";
 import PieceImage from "../PieceImage/PieceImage";
 import { useChessData } from "../../context/ChessDataProvider";
+import { GameMode } from "../../lib/interfaces/GameMode";
 // import { useState } from "react";
 
 interface SquareProps {
@@ -17,7 +18,11 @@ interface SquareProps {
 }
 
 export default function SquareComponent({ square }: SquareProps) {
-  const {selectedPiece, setSelectedPiece} = useChessData();
+  const {
+    selectedPiece, 
+    setSelectedPiece, 
+    currentGameMode
+  } = useChessData();
   
   
   // const selectedPiece = useSelector((store) => store.selectedPiece);
@@ -195,7 +200,10 @@ export default function SquareComponent({ square }: SquareProps) {
 
   const handleClick = () => {
     console.log(`clicked ${square.piece} at ${square.coordinate}`);
-    setSelectedPiece(square);
+    
+    if (currentGameMode === GameMode.FREEPLAY) {
+      setSelectedPiece(square);
+    }
   };
 
   return (

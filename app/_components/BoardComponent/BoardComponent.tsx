@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import { defaultStartingBoard } from "../../lib/data/defaultStartingBoard"
-import { Board, Square } from "../../lib/interfaces/board"
+import { Board, Square } from "../../lib/interfaces/Board"
 import SquareComponent from "../SquareComponent/SquareComponent";
 import { ChessDataProvider } from "../../context/ChessDataProvider";
 
