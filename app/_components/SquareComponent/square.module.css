@@ -5,10 +5,18 @@
   align-items: center;
   height: 12.5%;
   width: 12.5%;
-	
   font-size: 10px;
   text-align: left;
 }
+
+:root {
+  --whiteSquare: rgb(247, 208, 164);
+  --blackSquare: rgb(199, 141, 83);
+  --transparent: rgba(255, 255, 255, 0);
+  --legalMove: rgb(129, 174, 211);
+  --highLight: rgb(240, 237, 93);
+}
+
 
 .square .coordinate {
   position: absolute;
@@ -18,42 +26,41 @@
   text-transform: uppercase;
 }
 
-.coordinate::selection, .coordinate::-moz-selection {
+.coordinate::selection,
+.coordinate::-moz-selection,
+.coordinate {
   user-select: none;
   pointer-events: none;
 }
 
 
-.coordinate {
-  pointer-events: none;
-}
-
-
 .white {
-  background: rgb(247, 208, 164);
+  background: var(--whiteSquare);
 }
 
 .black {
-  background: rgb(199, 141, 83);
+  background: var(--blackSquare);
 }
 
 .highlightLast {
-  background-color: rgb(255, 253, 128);
+  background-color: var(--whiteSquare);
 }
+
 .black.highlightLast {
-  /* background-color: rgb(133, 133, 133); */
-  background-color: rgb(240, 237, 93);
+  background-color: var(--highlightLast)
 
 }
-
 
 .legalMove {
-  background-color: rgb(145, 193, 231);
-}  
-.black.legalMove {
-  background-color: rgb(129, 174, 211);
-}  
+  background-color: var(--legalMove);
+}
 
-.black.selected, .white.selected {
-  background-color: rgba(0, 223, 252, 0) ;
-}  
+.black.legalMove {
+  background-color: var(--legalMove);
+}
+
+.black.selected,
+.white.selected,
+.selected {
+  background-color: var(--transparent);
+}

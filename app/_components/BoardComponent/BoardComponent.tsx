@@ -3,18 +3,19 @@ import { useState } from "react";
 import { defaultStartingBoard } from "../../lib/data/defaultStartingBoard"
 import { Board, Square } from "../../lib/interfaces/board"
 import SquareComponent from "../SquareComponent/SquareComponent";
+import { ChessDataProvider } from "../../context/ChessDataProvider";
 
 
 export default function BoardComponent() {
-	const [board,setBoard] = useState<Board>(defaultStartingBoard)
+  const [board, setBoard] = useState<Board>(defaultStartingBoard)
 
   // const flipThePerspective = false;
 
   //standard map of board
-  const whiteView = board.map((square:Square) => (
+  const whiteView = board.map((square: Square) => (
     <SquareComponent key={`sq${square.id}`} square={square} setBoard={setBoard} />
   ));
-	
+
   //slice() creates a copy of whiteView as to avoid mutating the whiteView const
   // const blackView = whiteView.slice().reverse();
 
@@ -25,5 +26,9 @@ export default function BoardComponent() {
   //   isWhiteTurn && flipThePerspective ? blackView  : 
   //   flipThePerspective ? whiteView : blackView; // !isWhiteTurn is implied as this is the else
 
-  return <div id="board">{whiteView}</div>;
+  return (
+    <ChessDataProvider>
+      <div id="board">{whiteView}</div>;
+    </ChessDataProvider>
+  )
 }

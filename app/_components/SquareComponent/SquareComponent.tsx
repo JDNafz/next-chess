@@ -8,6 +8,7 @@ import { Dispatch, SetStateAction } from "react";
 import { Board, Square } from "../../lib/interfaces/board";
 import styles from "./square.module.css";
 import PieceImage from "../PieceImage/PieceImage";
+import { useChessData } from "../../context/ChessDataProvider";
 // import { useState } from "react";
 
 interface SquareProps {
@@ -16,6 +17,11 @@ interface SquareProps {
 }
 
 export default function SquareComponent({ square }: SquareProps) {
+  const {selectedPiece, setSelectedPiece} = useChessData();
+  
+  
+  // const selectedPiece = useSelector((store) => store.selectedPiece);
+
   // const { getLegalMoves } = useLegalMoves();
   // const [isWhiteTurn, setIsWhiteTurn] = useState<boolean>(true);
 
@@ -24,7 +30,6 @@ export default function SquareComponent({ square }: SquareProps) {
   // const gameMode = useSelector((store) => store.gameMode);
   // const isWhiteTurn = useSelector((store) => store.isWhiteTurn);
   // const legalMoves = useSelector((store) => store.legalMoves);
-  // const selectedPiece = useSelector((store) => store.selectedPiece);
   // const highlightLast = useSelector((store) => store.highlightLast);
   // const showLegalMoves = useSelector((store) => store.showLegalMoves);
   // const specialMoves = useSelector((store) => store.specialMoves);
@@ -162,9 +167,9 @@ export default function SquareComponent({ square }: SquareProps) {
   }
 
   // highlight selected piece
-  // if (square.coordinate === selectedPiece.coordinate) {
-  //   squareClass += " selected";
-  // }
+  if (square.coordinate === selectedPiece?.coordinate) {
+    squareClass += ` ${styles.selected}`;
+  }
   // highlight legal moves
   // if (showLegalMoves) {
   //   for (let sq of legalMoves) {
@@ -190,7 +195,7 @@ export default function SquareComponent({ square }: SquareProps) {
 
   const handleClick = () => {
     console.log(`clicked ${square.piece} at ${square.coordinate}`);
-
+    setSelectedPiece(square);
   };
 
   return (
