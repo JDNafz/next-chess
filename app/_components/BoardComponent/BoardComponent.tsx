@@ -6,7 +6,7 @@ import SquareComponent from "../SquareComponent/SquareComponent";
 import { ChessDataProvider } from "../../context/ChessDataProvider";
 import { createBoardFromFEN } from "../../lib/data/fenBoard";
 import { ChessBoard, Color, Square } from "../../lib/interfaces/ChessInterfaces";
-import style from "../SquareComponent/square.module.css"
+import style from "./board.module.css"
 
 const BoardComponent: React.FC = () => {
   const [board, setBoard] = useState<ChessBoard>(createBoardFromFEN())

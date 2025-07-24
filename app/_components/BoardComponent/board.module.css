@@ -1,0 +1,66 @@
+.square {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12.5%;
+  width: 12.5%;
+  font-size: 10px;
+  text-align: left;
+}
+
+:root {
+  --whiteSquare: rgb(247, 208, 164);
+  --blackSquare: rgb(199, 141, 83);
+  --transparent: rgba(255, 255, 255, 0);
+  --legalMove: rgb(129, 174, 211);
+  --highLight: rgb(240, 237, 93);
+}
+
+
+.square .coordinate {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 4px;
+  text-transform: uppercase;
+}
+
+.coordinate::selection,
+.coordinate::-moz-selection,
+.coordinate {
+  user-select: none;
+  pointer-events: none;
+}
+
+
+.white {
+  background: var(--whiteSquare);
+}
+
+.black {
+  background: var(--blackSquare);
+}
+
+.highlightLast {
+  background-color: var(--whiteSquare);
+}
+
+.black.highlightLast {
+  background-color: var(--highlightLast)
+
+}
+
+.legalMove {
+  background-color: var(--legalMove);
+}
+
+.black.legalMove {
+  background-color: var(--legalMove);
+}
+
+.black.selected,
+.white.selected,
+.selected {
+  background-color: var(--transparent);
+}
