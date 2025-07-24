@@ -8,7 +8,7 @@ import { createBoardFromFEN } from "../../lib/data/fenBoard";
 import { ChessBoard, Square } from "../../lib/interfaces/ChessInterfaces";
 
 
-export default function BoardComponent() {
+const BoardComponent: React.FC = () => {
   const [board, setBoard] = useState<ChessBoard>(defaultStartingBoard)
 
   // const flipThePerspective = false;
@@ -29,7 +29,8 @@ export default function BoardComponent() {
   })
   return (
     <ChessDataProvider>
-      <div id="board">{fenMapped}</div>;
+      <div id="board">{fenMapped}</div>
     </ChessDataProvider>
   )
 }
+export default BoardComponent;

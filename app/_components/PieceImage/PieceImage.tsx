@@ -35,10 +35,12 @@ const imageComponents = {
   [`${PieceType.PAWN}-${Color.WHITE}`]: <Wp />,
 }
 
+interface PieceImageProps {
+  square: ChessPiece
+}
 
 
-
-export default function PieceImage({ square }: { square: ChessPiece }) {
+export const PieceImage: React.FC<PieceImageProps> =  ( {square} ) => {
 
   const key = `${square.piece}-${square.color}`
   const imageComponent = imageComponents[key];
@@ -49,4 +51,4 @@ export default function PieceImage({ square }: { square: ChessPiece }) {
     </>
   );
 }
-//helper function in same location to import all at once
+export default PieceImage

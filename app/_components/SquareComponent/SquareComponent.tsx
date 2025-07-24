@@ -13,7 +13,7 @@ interface SquareProps {
       onClick: () => void
 }
 
-export default function SquareComponent({ index, isBlackSquare, square, onClick }: SquareProps) {
+const SquareComponent: React.FC<SquareProps> = ({ index, isBlackSquare, square, onClick }) => {
   // console.log(square.color);
   return (
     <>
@@ -27,3 +27,4 @@ export default function SquareComponent({ index, isBlackSquare, square, onClick 
     </>
   );
 }
+export default SquareComponent
