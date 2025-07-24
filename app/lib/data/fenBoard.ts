@@ -1,5 +1,7 @@
-export const createBoardFromFEN = (fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR") => {
-    const board = new Array(64).fill(null);
+import { ChessBoard } from "../interfaces/ChessInterfaces";
+
+export const createBoardFromFEN = (fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"): ChessBoard => {
+    const board: ChessBoard = new Array(64).fill(null);
     const rows = fen.split('/');
 
     const pieceMap = {
@@ -33,6 +35,5 @@ export const createBoardFromFEN = (fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNB
         } //end row
         index -= 8 // Move the board[index] down a row 
     });
-
     return board;
 }

@@ -17,58 +17,32 @@ import Wnl from "./Pieces/wnl";
 import Wr from "./Pieces/wr";
 import Wp from "./Pieces/wp";
 
+import { ChessPiece, Color, PieceType } from "../../lib/interfaces/ChessInterfaces";
+
+const imageComponents = {
+  [`${PieceType.KING}-${Color.BLACK}`]: <Bk />,
+  [`${PieceType.QUEEN}-${Color.BLACK}`]: <Bq />,
+  [`${PieceType.BISHOP}-${Color.BLACK}`]: <Bb />,
+  [`${PieceType.KNIGHT}-${Color.BLACK}`]: <Bnl />,
+  [`${PieceType.ROOK}-${Color.BLACK}`]: <Br />,
+  [`${PieceType.PAWN}-${Color.BLACK}`]: <Bp />,
+
+  [`${PieceType.KING}-${Color.WHITE}`]: <Wk />,
+  [`${PieceType.QUEEN}-${Color.WHITE}`]: <Wq />,
+  [`${PieceType.BISHOP}-${Color.WHITE}`]: <Wb />,
+  [`${PieceType.KNIGHT}-${Color.WHITE}`]: <Wnl />,
+  [`${PieceType.ROOK}-${Color.WHITE}`]: <Wr />,
+  [`${PieceType.PAWN}-${Color.WHITE}`]: <Wp />,
+}
 
 
-export default function PieceImage({ piece }: {piece: string}) {
-  // console.log(piece);
-  let imageComponent;
-  //switch statement to check all the non-pawns
-  switch (piece) {
-    case "bp":
-      imageComponent = <Bp />;
-      break;
-    case "bk":
-      imageComponent = <Bk />;
-      break;
-    case "bq":
-      imageComponent = <Bq />;
-      break;
-    case "bb":
-      imageComponent = <Bb />;
-      break;
-    case "bn":
-      imageComponent = <Bnl />;
-      break;
-    // case "bnr":
-    //   imageComponent = <Bnr />;
-    //   break;
-    case "br":
-      imageComponent = <Br />;
-      break;
-    case "wp":
-      imageComponent = <Wp />;
-      break;
-    case "wk":
-      imageComponent = <Wk />;
-      break;
-    case "wq":
-      imageComponent = <Wq />;
-      break;
-    case "wb":
-      imageComponent = <Wb />;
-      break;
-    case "wn":
-      imageComponent = <Wnl />;
-      break;
-    // case "wnr":
-    //   imageComponent = <Wnr />;
-    //   break;
-    case "wr":
-      imageComponent = <Wr />;
-      break;
-    default:
-      imageComponent = null;
-  }
+
+
+export default function PieceImage({ square }: { square: ChessPiece }) {
+
+  const key = `${square.piece}-${square.color}`
+  const imageComponent = imageComponents[key];
+
   return (
     <>
       <div className={styles.pieceImage}>{imageComponent}</div>
