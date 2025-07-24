@@ -10,7 +10,6 @@ import styles from "./square.module.css";
 import PieceImage from "../PieceImage/PieceImage";
 import { useChessData } from "../../context/ChessDataProvider";
 import { GameMode } from "../../lib/interfaces/GameMode";
-// import { useState } from "react";
 
 interface SquareProps {
   square: Square;
@@ -133,33 +132,38 @@ export default function SquareComponent({ square }: SquareProps) {
   //   });
   // }
 
-  // const freePlayClick = () => {
-  //   const noSelectedPiece = selectedPiece.coordinate === "";
-  //   const clickedAPiece = square.piece !== null;
-  //   // console.log("Free play MODE");
-  //   if (noSelectedPiece) {
-  //     if (clickedAPiece) {
-  //       dispatch({ type: "SELECT_PIECE", payload: { square: square } });
-  //     }
-  //   } else {
-  //     const start = selectedPiece.coordinate;
-  //     const end = square.coordinate;
-  //     console.log(square);
-  //     if (square.piece === "wk") {
-  //       dispatch({ type: "SET_WINNER", payload: { bool: true, color: "b" } });
-  //     } else if (square.piece === "bk") {
-  //       dispatch({ type: "SET_WINNER", payload: { bool: true, color: "w" } });
-  //     }
-  //     dispatch({
-  //       type: "MAKE_MOVE",
-  //       payload: {
-  //         newBoard: makeSimpleMove(start, end, board),
-  //         move: start + end,
-  //         gameLog: gameLog,
-  //       },
-  //     });
-  //   }
-  // };
+  const freePlayClick = () => {
+    const noSelectedPiece = selectedPiece.coordinate === "";
+    const clickedAPiece = square.piece !== null;
+    // console.log("Free play MODE");
+    if (noSelectedPiece) {
+      if (clickedAPiece) {
+        // dispatch({ type: "SELECT_PIECE", payload: { square: square } });
+        setSelectedPiece(square);
+      }
+    } else {
+      const start = selectedPiece.coordinate;
+      const end = square.coordinate;
+      console.log(square);
+      if (square.piece === "wk") {
+        // dispatch({ type: "SET_WINNER", payload: { bool: true, color: "b" } });
+        alert("Black wins!");
+      } else if (square.piece === "bk") {
+        // dispatch({ type: "SET_WINNER", payload: { bool: true, color: "w" } });
+        alert("White wins!");
+      }
+      // Make a move 
+
+      // dispatch({
+      //   type: "MAKE_MOVE",
+      //   payload: {
+      //     newBoard: makeSimpleMove(start, end, board),
+      //     move: start + end,
+      //     gameLog: gameLog,
+      //   },
+      // });
+    }
+  };
 
   //create classes for styling squares
   //basic black or white
@@ -202,7 +206,7 @@ export default function SquareComponent({ square }: SquareProps) {
     console.log(`clicked ${square.piece} at ${square.coordinate}`);
     
     if (currentGameMode === GameMode.FREEPLAY) {
-      setSelectedPiece(square);
+      freePlayClick();
     }
   };
 
