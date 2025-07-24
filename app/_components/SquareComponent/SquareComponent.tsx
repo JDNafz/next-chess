@@ -8,17 +8,17 @@ interface SquareProps {
   // square: Square;
   // setBoard: Dispatch<SetStateAction<Board>>;
       index: number,
-      isBlackSquare: boolean,
+      cssClass: String,
       square: ChessPiece,
       onClick: () => void
 }
 
-const SquareComponent: React.FC<SquareProps> = ({ index, isBlackSquare, square, onClick }) => {
+const SquareComponent: React.FC<SquareProps> = ({ index, cssClass, square, onClick }) => {
   // console.log(square.color);
   return (
     <>
       <div
-        className={`${styles.square} ${isBlackSquare ? styles.black: styles.white }`}
+        className={`${styles.square} ${cssClass}`}
         onClick={onClick}
       >
         <div className={styles.coordinate}>{indexToCoordinate(index)}</div>
