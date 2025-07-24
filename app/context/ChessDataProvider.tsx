@@ -1,12 +1,12 @@
 import React, { createContext, ReactNode, useContext, useState } from "react";
-import { Square } from "../lib/interfaces/Board";
 import { GameMode } from "../lib/interfaces/GameMode";
+import { ChessPiece } from "../lib/interfaces/ChessInterfaces";
 
 
 
 interface ChessContextType {
-    selectedPiece: Square | null;
-    setSelectedPiece: React.Dispatch<React.SetStateAction<Square>>
+    selectedPiece: ChessPiece | null;
+    setSelectedPiece: React.Dispatch<React.SetStateAction<ChessPiece>>
     currentGameMode: GameMode
     setCurrentGameMode: React.Dispatch<React.SetStateAction<GameMode>>
     //insert more variables
@@ -16,7 +16,7 @@ const ChessContext = createContext<ChessContextType>(null);
 
 export const ChessDataProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     //initialize the state of variables
-    const [selectedPiece, setSelectedPiece] = useState<Square | null>(null);
+    const [selectedPiece, setSelectedPiece] = useState<ChessPiece | null>(null);
     const [currentGameMode, setCurrentGameMode] = useState<GameMode>(GameMode.FREEPLAY)
     return (
         <ChessContext.Provider
